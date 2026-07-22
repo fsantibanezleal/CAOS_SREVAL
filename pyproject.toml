@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sreval"
+version = "0.1.0"
+description = "An honest evaluator for symbolic regression: triple-equivalence testing that reports its own failure rate."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "Felipe Santibanez-Leal", email = "fsantibanez@gmail.com" }]
+keywords = ["symbolic-regression", "equation-discovery", "benchmarking", "evaluation", "interpretable-ml"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Scientific/Engineering :: Mathematics",
+]
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+symbolic = ["sympy>=1.12"]
+dev = ["pytest>=7", "ruff>=0.6", "sympy>=1.12", "build>=1.0", "twine>=5.0"]
+
+[project.urls]
+Homepage = "https://github.com/fsantibanezleal/CAOS_SREVAL"
+Repository = "https://github.com/fsantibanezleal/CAOS_SREVAL"
+Issues = "https://github.com/fsantibanezleal/CAOS_SREVAL/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
