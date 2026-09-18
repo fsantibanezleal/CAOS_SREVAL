@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "sreval"
-version = "0.1.0"
-description = "An honest evaluator for symbolic regression: triple-equivalence testing that reports its own failure rate."
+version = "0.1.1"
+description = "An evaluator for symbolic regression: triple-equivalence testing that reports its own failure rate."
 readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.10"

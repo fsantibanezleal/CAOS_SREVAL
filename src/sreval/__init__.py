@@ -41,7 +41,7 @@ from .metrics import (
     pareto_front,
 )
 
-__version__ = "0.01.000"
+__version__ = "0.01.001"
 
 __all__ = [
     "equivalence", "metrics",

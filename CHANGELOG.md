@@ -2,6 +2,14 @@
 
 All notable changes are documented here. Format follows Keep a Changelog; newest on top.
 
+## 0.01.001 - 2026-09-18
+
+### Changed
+
+- The package summary (the PyPI one-line description) and the README opening no longer call the
+  package "honest"; they state what it does: triple-equivalence testing that reports its own
+  failure rate. The README section "Scope, honestly" is now "Scope". No code change.
+
 ## 0.01.000 - 2026-07-22
 
 ### Added
