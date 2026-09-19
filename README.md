@@ -3,7 +3,7 @@
 [![CI](https://github.com/fsantibanezleal/CAOS_SREVAL/actions/workflows/ci.yml/badge.svg)](https://github.com/fsantibanezleal/CAOS_SREVAL/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-An honest evaluator for symbolic regression: triple-equivalence testing that reports its own failure rate.
+An evaluator for symbolic regression: triple-equivalence testing that reports its own failure rate.
 
 ## Why this exists
 
@@ -72,7 +72,7 @@ API merges them for you.
 most accurate member reproduces the field's headline failure, because the most accurate member of a
 front is routinely the most over-parameterised one.
 
-## Scope, honestly
+## Scope
 
 - It does **not** perform symbolic regression. It evaluates results from any engine.
 - It does **not** decide whether a discovered equation is true. Fitting is not discovering, and no
