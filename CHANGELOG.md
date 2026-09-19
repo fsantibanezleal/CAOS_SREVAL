@@ -2,13 +2,17 @@
 
 All notable changes are documented here. Format follows Keep a Changelog; newest on top.
 
-## 0.01.001 - 2026-09-18
+## 0.01.001 - 2026-09-19
 
 ### Changed
 
-- The package summary (the PyPI one-line description) and the README opening no longer call the
-  package "honest"; they state what it does: triple-equivalence testing that reports its own
-  failure rate. The README section "Scope, honestly" is now "Scope". No code change.
+- The package summary (the PyPI one-line description), the README opening and the module docstring
+  no longer call the package "honest"; they state what it does: triple-equivalence testing that
+  reports its own failure rate. The README section "Scope, honestly" is now "Scope".
+- Lint: `__all__` sorted (RUF022) and `Callable`, `Sequence` imported from `collections.abc`
+  (UP035). Both findings come from a newer ruff on code unchanged since 0.01.000; no behaviour change.
+- The `dev` extra pins ruff to `>=0.16.8,<0.17`, so a new ruff release cannot turn CI red on
+  unchanged code.
 
 ## 0.01.000 - 2026-07-22
 

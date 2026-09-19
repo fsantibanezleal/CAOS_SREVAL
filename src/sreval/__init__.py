@@ -1,4 +1,4 @@
-"""sreval: an honest evaluator for symbolic regression.
+"""sreval: an evaluator for symbolic regression that reports its own failure rate.
 
 The package exists because of one published result: a method can score above 0.999 on a coefficient
 of determination while recovering the correct expression STRUCTURE zero percent of the time. If a
@@ -44,10 +44,22 @@ from .metrics import (
 __version__ = "0.01.001"
 
 __all__ = [
-    "equivalence", "metrics",
-    "check", "summarise", "symbolic_equivalent", "numerical_equivalent", "structural_distance",
-    "Verdict", "Report", "SymbolicResult", "NumericalResult", "StructuralResult",
-    "accuracy_solution", "coefficient_of_determination", "normalised_mse",
-    "description_length", "pareto_front",
+    "NumericalResult",
+    "Report",
+    "StructuralResult",
+    "SymbolicResult",
+    "Verdict",
     "__version__",
+    "accuracy_solution",
+    "check",
+    "coefficient_of_determination",
+    "description_length",
+    "equivalence",
+    "metrics",
+    "normalised_mse",
+    "numerical_equivalent",
+    "pareto_front",
+    "structural_distance",
+    "summarise",
+    "symbolic_equivalent",
 ]

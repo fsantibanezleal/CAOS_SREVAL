@@ -27,7 +27,7 @@ dependencies = ["numpy>=1.24"]
 
 [project.optional-dependencies]
 symbolic = ["sympy>=1.12"]
-dev = ["pytest>=7", "ruff>=0.6", "sympy>=1.12", "build>=1.0", "twine>=5.0"]
+dev = ["pytest>=7", "ruff>=0.16.8,<0.17", "sympy>=1.12", "build>=1.0", "twine>=5.0"]
 
 [project.urls]
 Homepage = "https://github.com/fsantibanezleal/CAOS_SREVAL"
