@@ -2,13 +2,16 @@ name: CI
 
 on:
   push:
-    branches: [main, develop, "task/**"]
-  pull_request:
     branches: [main, develop]
+  workflow_dispatch:
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   test:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     strategy:
       matrix:
         python-version: ["3.10", "3.12"]
@@ -27,3 +30,5 @@ jobs:
           python -m venv /tmp/clean
           /tmp/clean/bin/python -m pip install -q dist/*.whl
           /tmp/clean/bin/python -c "import sreval; print(sreval.__version__)"
+      - name: CI budget, trunk-only triggers, no training (ADR-0074)
+        run: python scripts/check_ci_budget.py
